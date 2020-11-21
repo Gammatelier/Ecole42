@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 17:23:40 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/20 18:45:39 by dhers            ###   ########.fr       */
+/*   Created: 2020/11/20 16:11:11 by dhers             #+#    #+#             */
+/*   Updated: 2020/11/20 17:49:05 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *s, int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		i;
-	char	*str;
+	unsigned char	*src;
+	size_t			i;
 
 	i = 0;
-	str = (char *)s;
+	src = (unsigned char *)s;
 	while (i < n)
-		str[i++] = 0;
-	return (s);
+	{
+		if (src[i] == c)
+			return (s[i]);
+		i++;
+	}
+	return (NULL)
 }

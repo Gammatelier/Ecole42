@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 17:23:40 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/20 18:45:39 by dhers            ###   ########.fr       */
+/*   Created: 2020/11/21 16:27:56 by dhers             #+#    #+#             */
+/*   Updated: 2020/11/21 16:33:52 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *s, int n)
-{
-	int		i;
-	char	*str;
+#ifndef LIBFT_H
+# define LIBFT_H
 
-	i = 0;
-	str = (char *)s;
-	while (i < n)
-		str[i++] = 0;
-	return (s);
-}
+#include <unistd.h>
+
+int	ft_atoi(const char *nptr);
+
+#endif

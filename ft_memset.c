@@ -6,14 +6,13 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 16:59:53 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/19 17:18:24 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/20 18:58:14 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memset(void *s, int c, size_t n)
-
 {
-	size_t 	i;
+	size_t	i;
 	char	*str;
 
 	i = 0;

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 17:23:40 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/20 18:45:39 by dhers            ###   ########.fr       */
+/*   Created: 2020/11/20 18:07:05 by dhers             #+#    #+#             */
+/*   Updated: 2020/11/20 18:27:27 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *s, int n)
+int	memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
-	char	*str;
+	unsigned char	*temp1;
+	unsigned char	*temp2;
+	size_t			i;
 
+	temp1 = (unsigned char*)s1;
+	temp2 = (unsigned char*)s2;
 	i = 0;
-	str = (char *)s;
-	while (i < n)
-		str[i++] = 0;
-	return (s);
+	while ((temp1[i] == temp2[i]) && i < n)
+		i++;
+	if (temp1[i] != temp2[i])
+		return (temp2[i] - temp1[i]);
+	return (0);
 }
