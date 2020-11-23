@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/21 16:27:56 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/23 16:50:26 by dhers            ###   ########.fr       */
+/*   Created: 2020/11/23 18:08:57 by dhers             #+#    #+#             */
+/*   Updated: 2020/11/23 18:48:31 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <stdlib.h>
 
-# include <unistd.h>
-
-int	ft_atoi(const char *nptr);
-
-#endif
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	return (malloc(nmemb * size));
+}

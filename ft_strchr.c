@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/21 16:27:56 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/23 16:50:26 by dhers            ###   ########.fr       */
+/*   Created: 2020/11/23 16:33:57 by dhers             #+#    #+#             */
+/*   Updated: 2020/11/23 16:48:38 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+char	*ft_strchr(const char *s, int c)
+{
+	char	*str;
+	int		i;
 
-# include <unistd.h>
-
-int	ft_atoi(const char *nptr);
-
-#endif
+	str = (const char *)s;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == c)
+			return (str[i]);
+		i++;
+	}
+	if (str[i] == c)
+		return (str[i]);
+	return (NULL);
+}

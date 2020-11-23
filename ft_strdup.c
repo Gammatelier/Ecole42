@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/21 16:27:56 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/23 16:50:26 by dhers            ###   ########.fr       */
+/*   Created: 2020/11/23 18:25:44 by dhers             #+#    #+#             */
+/*   Updated: 2020/11/23 18:43:05 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <stdlib.h>
+#include "libft.h"
 
-# include <unistd.h>
+char	*ft_strdup(const char *s)
+{
+	const char	*str;
+	int			i;
+	int			len;
 
-int	ft_atoi(const char *nptr);
-
-#endif
+	i = 0;
+	len = ft_strlen(s);
+	str = malloc(sizeof(char) * (len + 1));
+	while (i <= len)
+	{
+		str[i] = s[i];
+		i++;
+	}
+	return (str);
+}

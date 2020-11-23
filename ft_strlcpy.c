@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/21 16:27:56 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/23 16:50:26 by dhers            ###   ########.fr       */
+/*   Created: 2020/11/23 17:29:13 by dhers             #+#    #+#             */
+/*   Updated: 2020/11/23 17:33:53 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	size_t	i;
 
-# include <unistd.h>
-
-int	ft_atoi(const char *nptr);
-
-#endif
+	i = 0;
+	if (size == 0)
+	{
+		while (src[i] != '\0')
+			i++;
+		return (i);
+	}
+	else
+	{
+		while (i < size - 1 && src[i] != '\0')
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+		i = 0;
+		while (src[i] != '\0')
+			i++;
+		return (i);
+	}
+}
