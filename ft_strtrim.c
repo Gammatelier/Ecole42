@@ -6,13 +6,13 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 22:34:41 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 21:58:14 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 23:58:45 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	int		start;

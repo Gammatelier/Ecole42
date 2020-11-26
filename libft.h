@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 16:27:56 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 18:45:20 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 22:59:00 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 char    *ft_strdup(const char *s);
 char    *ft_strchr(const char *s, int c);
-char    *strchr(const char *s, int c);
+char    *ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t  ft_strlcpy(char *dst, const char *src, size_t size);
 size_t  ft_strlcat(char *dst, const char *src, size_t size);

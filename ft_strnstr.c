@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 17:32:45 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 21:02:22 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/27 00:29:36 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			j = 0;
 			while (little[j] == big[i + j] && little[j] != '\0')
 				j++;
-			if (little[j] == '\0')
+			if (little[j] == '\0' && (i + j) < len)
 				return ((char *)big + i);
 		}
 		i++;
