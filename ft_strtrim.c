@@ -6,14 +6,13 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 22:34:41 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/25 22:58:44 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 17:49:56 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-int		ft_check(char *set, char c)
+static int		ft_check(char *set, char c)
 {
 	int	i;
 
@@ -27,7 +26,7 @@ int		ft_check(char *set, char c)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char			*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 

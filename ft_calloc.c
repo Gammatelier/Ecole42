@@ -6,11 +6,9 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 18:08:57 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/23 18:48:31 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 17:19:57 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

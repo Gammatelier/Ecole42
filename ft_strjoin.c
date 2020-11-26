@@ -6,12 +6,11 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:04:49 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/25 22:32:53 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 17:43:16 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

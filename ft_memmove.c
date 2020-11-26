@@ -6,11 +6,11 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 09:21:12 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/20 09:41:38 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 17:22:56 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*temp1;
 	unsigned char	*temp2;
