@@ -6,36 +6,34 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 22:34:41 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 17:49:56 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 21:58:14 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_check(char *set, char c)
-{
-	int	i;
-
-	i = 0;
-	while (set[i] != '\0')
-	{
-		if (set[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
 char			*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
+	int		start;
+	int		end;
+	int		i;
 
-	if (!(str = malloc(sizeof(char) * (ft_strlen(s1) + 1))))
+	i = 0;
+	start = 0;
+	end = ft_strlen(s1 - 1);
+	if (!(str = malloc(sizeof(char) * (end + 1))))
 		return (NULL);
-	while (ft_check(set, *s1) == 1 && *s1 != '\0')
-		*s1++;
-	while (ft_check(set, *s1) == 0 && *s1 != '\0')
-		*str++ = *s1++;
-	*str = '\0';
+	while (ft_strchr(set, s1[start]) == 0 && s1[start] != '\0')
+		start++;
+	while (ft_strchr(set, s1[end]) == 0 && s1[end] != '\0')
+		end--;
+	while (start <= end)
+	{
+		str[i] = s1[start];
+		start++;
+		i++;
+	}
+	str[i] = '\0';
 	return (str);
 }

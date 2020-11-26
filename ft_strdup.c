@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 18:25:44 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 17:34:47 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 21:09:34 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *s)
 {
-	const char	*str;
-	int			i;
-	int			len;
+	char	*str;
+	int		i;
+	int		len;
 
 	i = 0;
 	len = ft_strlen(s);
@@ -26,5 +26,6 @@ char	*ft_strdup(const char *s)
 		str[i] = s[i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }

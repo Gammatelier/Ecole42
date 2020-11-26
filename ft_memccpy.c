@@ -6,9 +6,11 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 22:07:21 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 17:23:08 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 20:16:34 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
@@ -21,9 +23,9 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	temp2 = (unsigned char *)dest;
 	while (i < n)
 	{
-		*temp2[i] = *temp1[i];
+		temp2[i] = temp1[i];
 		if (temp1[i] == c)
-			return (dest[i + 1]);
+			return (dest + i + 1);
 		i++;
 	}
 	return (NULL);

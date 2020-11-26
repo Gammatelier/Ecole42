@@ -6,9 +6,11 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 17:29:13 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/23 17:33:53 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 20:40:00 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -25,10 +27,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	{
 		while (i < size - 1 && src[i] != '\0')
 		{
-			dest[i] = src[i];
+			dst[i] = src[i];
 			i++;
 		}
-		dest[i] = '\0';
+		dst[i] = '\0';
 		i = 0;
 		while (src[i] != '\0')
 			i++;

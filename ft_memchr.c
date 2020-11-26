@@ -6,9 +6,11 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 16:11:11 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 17:29:53 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 20:20:35 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

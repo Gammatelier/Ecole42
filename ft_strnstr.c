@@ -6,9 +6,11 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 17:32:45 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 17:39:18 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 21:02:22 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

@@ -6,13 +6,13 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 23:02:14 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 17:49:18 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 22:02:18 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_word_count(char *s, char c)
+static int		ft_word_count(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -28,7 +28,7 @@ static int		ft_word_count(char *s, char c)
 	return (count);
 }
 
-static int		ft_word_size(char *s, int n, char c)
+static int		ft_word_size(char const *s, int n, char c)
 {
 	int	size;
 
@@ -49,7 +49,7 @@ char			**ft_split(char const *s, char c)
 	int		j;
 	int		k;
 
-	count = ft_wordcount(s, c);
+	count = ft_word_count(s, c);
 	if (!(result = malloc(sizeof(char *) * (count + 1))))
 		return (NULL);
 	i = 0;

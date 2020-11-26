@@ -6,9 +6,11 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 17:05:23 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/23 17:08:45 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 20:38:24 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -16,8 +18,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	char	*str1;
 	char	*str2;
 
-	str1 = (const char *)s1;
-	str2 = (const char *)s2;
+	str1 = (char *)s1;
+	str2 = (char *)s2;
 	i = 0;
 	if (n == 0)
 		return (0);

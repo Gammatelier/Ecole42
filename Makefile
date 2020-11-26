@@ -6,7 +6,7 @@
 #    By: dhers <dhers@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/19 17:18:40 by dhers             #+#    #+#              #
-#    Updated: 2020/11/26 18:13:20 by dhers            ###   ########.fr        #
+#    Updated: 2020/11/26 18:41:49 by dhers            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ CFLAGS	=	-Wall -Wextra -Werror
 NAME	=	libft.a
 
 .c.o:
-		${CC} ${CFLAGS} -I ${HEADERS} -c $< -o ${<:.c=.o}
+		 ${CC} ${CFLAGS} -I ${HEADERS} -c $< -o ${<:.c=.o}
 
 all:		${NAME}
 

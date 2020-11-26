@@ -6,9 +6,11 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 18:07:05 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/20 18:27:27 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 20:22:38 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	memcmp(const void *s1, const void *s2, size_t n)
 {

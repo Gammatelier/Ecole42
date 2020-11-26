@@ -6,11 +6,11 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 15:41:06 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 18:02:49 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/26 22:02:52 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libf.h"
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
