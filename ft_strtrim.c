@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 17:55:11 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/27 20:39:34 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/28 00:47:36 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (ft_check(set, s1[end - 1]) == 1 && s1[end - 1] != '\0')
 		end--;
-	if (!(str = malloc(sizeof(char) * ((start > end)?1:(end - start + 1)))))
+	if (!(str = malloc(sizeof(char) * ((start > end) ? 1 : (end - start + 1)))))
 		return (NULL);
 	while ((start + i) < end)
 	{
