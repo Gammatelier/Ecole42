@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:04:49 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 23:34:55 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/27 17:56:22 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!(str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
 		return (NULL);
 	while (s1[i] != '\0')
+	{
 		str[i] = s1[i];
+		i++;
+	}
 	while (s2[j] != '\0')
 	{
 		str[i] = s2[j];
