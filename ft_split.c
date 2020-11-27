@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 23:02:14 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/27 17:56:48 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/27 22:45:21 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static int		ft_word_count(char const *s, char c)
 	i = 0;
 	while (s[i] == c)
 		i++;
+	if (s[i] == '\0')
+		return (count - 1);
 	while (s[i] != '\0')
 	{
 		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
@@ -30,42 +32,29 @@ static int		ft_word_count(char const *s, char c)
 	return (count);
 }
 
-static int		ft_word_size(char const *s, int n, char c)
-{
-	int	size;
-
-	size = 0;
-	while (s[n] != c && s[n] != '\0')
-	{
-		size++;
-		n++;
-	}
-	return (size);
-}
-
 char			**ft_split(char const *s, char c)
 {
 	char	**result;
-	int		count;
+	int		len;
+	int		pos;
 	int		i;
-	int		j;
-	int		k;
+	int		temp;
 
-	count = ft_word_count(s, c);
-	if (!(result = malloc(sizeof(char *) * (count + 1))))
-		return (NULL);
+	pos = 0;
 	i = 0;
-	j = 0;
-	while (i < count)
+	len = ft_word_count(s, c);
+	if (!(result = (char **)malloc(sizeof(char *) * len + 1)))
+		return (NULL);
+	while (i < len)
 	{
-		k = 0;
-		result[i] = malloc(sizeof(char) * (ft_word_size(s, j, c) + 1));
-		while (s[j] == c && s[j] != '\0')
-			j++;
-		while (s[j] != c && s[j] != '\0')
-			result[i][k++] = s[j++];
-		result[i][k] = '\0';
+		while (s[pos] == c && s[pos] != '\0')
+			pos++;
+		temp = pos;
+		while (s[pos] != c && s[pos] != '\0')
+			pos++;
+		result[i] = ft_substr(s, temp, pos - temp);
 		i++;
+		pos++;
 	}
 	result[i] = 0;
 	return (result);

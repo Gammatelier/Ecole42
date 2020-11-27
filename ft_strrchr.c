@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:51:27 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 22:58:05 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/27 18:34:06 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i >= 0)
 	{
 		if (str[i] == c)
-			return ((char *) s + i);
+			return ((char *)s + i);
 		i--;
 	}
 	return (NULL);
