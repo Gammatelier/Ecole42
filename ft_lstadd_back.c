@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 23:30:08 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/27 23:37:43 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/28 15:54:28 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list *lst;
 
-	lst = ft_lstlast(*alst);
-	lst->next = new;
+	if (*alst == NULL)
+		*alst = new;
+	else
+	{
+		lst = ft_lstlast(*alst);
+		lst->next = new;
+	}
 }

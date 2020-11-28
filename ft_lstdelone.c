@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 23:38:01 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/27 23:43:58 by dhers            ###   ########.fr       */
+/*   Updated: 2020/11/28 01:12:48 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	(*del)(lst->content);
+	if (lst->content != NULL)
+		(*del)(lst->content);
 	free(lst);
 }
