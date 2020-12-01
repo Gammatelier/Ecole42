@@ -23,7 +23,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!(str = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	if (start > ft_strlen(s))
+	{
+		str[0] = '\0';
 		return (str);
+	}
 	while (len > 0 && s[i] != '\0')
 	{
 		str[j] = s[i];

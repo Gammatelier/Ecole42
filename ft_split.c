@@ -32,30 +32,45 @@ static int		ft_word_count(char const *s, char c)
 	return (count);
 }
 
+static	char		**ft_free_all(char **result, size_t count)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < count)
+	{
+		free(result[i]);
+		i++;
+	}
+	free(result);
+	return (NULL);
+}
+
 char			**ft_split(char const *s, char c)
 {
 	char	**result;
-	int		len;
+	int		count;
 	int		pos;
 	int		i;
 	int		temp;
 
 	pos = 0;
 	i = 0;
-	len = ft_word_count(s, c);
-	if (!(result = (char **)malloc(sizeof(char *) * len + 1)))
+	count = ft_word_count(s, c);
+	if (!(result = (char **)malloc(sizeof(char *) * count + 1)))
 		return (NULL);
-	while (i < len)
+	while (i < count)
 	{
 		while (s[pos] == c && s[pos] != '\0')
 			pos++;
 		temp = pos;
 		while (s[pos] != c && s[pos] != '\0')
 			pos++;
-		result[i] = ft_substr(s, temp, pos - temp);
+		if (!(result[i] = ft_substr(s, temp, pos - temp)))
+			return (ft_free_all(result, count));
 		i++;
 		pos++;
 	}
 	result[i] = 0;
 	return (result);
-}
+} 
