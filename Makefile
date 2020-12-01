@@ -6,7 +6,7 @@
 #    By: dhers <dhers@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/19 17:18:40 by dhers             #+#    #+#              #
-#    Updated: 2020/11/28 00:48:21 by dhers            ###   ########.fr        #
+#    Updated: 2020/12/01 05:07:55 by dhers            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ NAME	=	libft.a
 all:		${NAME}
 
 ${NAME}:	${OBJS}
-		ar rc ${NAME} ${OBJS}
+		ar rcs ${NAME} ${OBJS}
 
 clean:
 		${RM} ${OBJS} ${BONUS_OBJS}
@@ -37,6 +37,6 @@ fclean:		clean
 re:		fclean all
 
 bonus:	$(OBJS) $(BONUS_OBJS)
-		ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
+		ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 .PHONY:	all clean fclean re bonus

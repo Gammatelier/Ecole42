@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 17:55:11 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/28 00:47:36 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/01 04:54:56 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (ft_strchr(set, s1[start]) != '\0' && s1[start] != '\0')
 		start++;
-	while (end > 0 && ft_strchr(set, s1[end - 1]) != '\0' && s1[end - 1] != '\0')
+	while (end > 0 && ft_strchr(set, s1[end - 1]) != '\0' &&
+s1[end - 1] != '\0')
 		end--;
 	if (start < end)
 		str = ft_substr(s1, start, (end - start));

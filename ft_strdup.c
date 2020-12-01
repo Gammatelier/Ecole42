@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 18:25:44 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 21:09:34 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/01 04:54:19 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	len = ft_strlen(s);
 	if (!(str = malloc(sizeof(char) * (len + 1))))
-	return (NULL);
+		return (NULL);
 	while (i < len)
 	{
 		str[i] = s[i];

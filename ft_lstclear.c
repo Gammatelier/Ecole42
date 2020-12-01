@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 23:44:18 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/28 15:45:30 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/01 04:53:37 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 	current = *lst;
 	if (current == NULL || del == NULL)
-		return;
+		return ;
 	while (current->next != NULL)
 	{
 		temp = current->next;

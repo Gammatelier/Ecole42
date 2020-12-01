@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 23:02:14 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/27 22:45:21 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/01 04:57:02 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int		ft_word_count(char const *s, char c)
 	return (count);
 }
 
-static	char		**ft_free_all(char **result, size_t count)
+static char		**ft_free_all(char **result, size_t count)
 {
 	size_t	i;
 
@@ -73,4 +73,4 @@ char			**ft_split(char const *s, char c)
 	}
 	result[i] = 0;
 	return (result);
-} 
+}

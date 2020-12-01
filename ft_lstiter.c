@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 23:57:52 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/28 15:47:34 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/01 04:53:23 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (lst == NULL || f == NULL)
-		return;
+		return ;
 	while (lst->next != NULL)
 	{
 		(*f)(lst->content);

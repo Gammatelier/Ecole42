@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 18:08:57 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 21:02:52 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/01 04:52:51 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t *result;
 
 	if (!(result = malloc(nmemb * size)))
-		return (NULL) ;
+		return (NULL);
 	ft_bzero(result, nmemb * size);
 	return (result);
 }
