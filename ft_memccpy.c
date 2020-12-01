@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 22:07:21 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/26 20:16:34 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/01 11:43:44 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	while (i < n)
 	{
 		temp2[i] = temp1[i];
-		if (temp1[i] == c)
+		if (temp1[i] == (unsigned char)c)
 			return (dest + i + 1);
 		i++;
 	}

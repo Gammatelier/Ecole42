@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 23:23:48 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/27 23:29:43 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/01 12:03:00 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+		return (NULL);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);

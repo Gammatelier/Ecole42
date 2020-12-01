@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 09:21:12 by dhers             #+#    #+#             */
-/*   Updated: 2020/11/27 18:33:27 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/01 12:36:08 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	temp1 = (unsigned char *)src;
 	temp2 = (unsigned char *)dest;
+	if (!src && !dest)
+		return (dest);
 	if (temp2 > temp1)
 	{
-		i = n - 1;
-		while (i < n)
-		{
+		i = n;
+		while (--i < n)
 			temp2[i] = temp1[i];
-			i--;
-		}
 	}
 	else
 	{
