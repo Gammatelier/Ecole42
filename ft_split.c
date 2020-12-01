@@ -6,13 +6,13 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 23:02:14 by dhers             #+#    #+#             */
-/*   Updated: 2020/12/01 11:39:29 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/01 21:54:57 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_word_count(char const *s, char c)
+static int		ft_count(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -32,9 +32,9 @@ static int		ft_word_count(char const *s, char c)
 	return (count);
 }
 
-static char		**ft_free_all(char **result, size_t count)
+static char		**ft_free_all(char **result, int count)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (i < count)
@@ -49,17 +49,17 @@ static char		**ft_free_all(char **result, size_t count)
 char			**ft_split(char const *s, char c)
 {
 	char	**result;
-	int		count;
 	int		pos;
 	int		i;
 	int		temp;
 
+	if (!s)
+		return (NULL);
 	pos = 0;
 	i = 0;
-	count = ft_word_count(s, c);
-	if (!(result = (char **)malloc(sizeof(char *) * count + 1)))
+	if (!(result = (char **)malloc(sizeof(char *) * (ft_count(s, c) + 1))))
 		return (NULL);
-	while (i < count)
+	while (i < ft_count(s, c))
 	{
 		while (s[pos] == c && s[pos] != '\0')
 			pos++;
@@ -67,7 +67,7 @@ char			**ft_split(char const *s, char c)
 		while (s[pos] != c && s[pos] != '\0')
 			pos++;
 		if (!(result[i] = ft_substr(s, temp, pos - temp)))
-			return (ft_free_all(result, count));
+			return (ft_free_all(result, i - 1));
 		i++;
 		pos++;
 	}

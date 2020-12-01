@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 16:32:10 by dhers             #+#    #+#             */
-/*   Updated: 2020/12/01 11:53:14 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/01 21:48:10 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,20 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
+	unsigned int nbr;
 
-	if (fd < 0)
-		return ;
-	str = ft_itoa(n);
-	ft_putstr_fd(str, fd);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nbr = -n;
+	}
+	else
+		nbr = n;
+	if (nbr < 10)
+		ft_putchar_fd((nbr + '0'), fd);
+	else
+	{
+		ft_putnbr_fd(nbr / 10, fd);
+		ft_putchar_fd(nbr % 10 + '0', fd);
+	}
 }
