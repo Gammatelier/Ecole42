@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 23:02:14 by dhers             #+#    #+#             */
-/*   Updated: 2020/12/01 21:54:57 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/04 13:05:00 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,19 @@
 
 static int		ft_count(char const *s, char c)
 {
-	int	count;
-	int	i;
+	int		count;
+	char    *str;
 
-	count = 1;
-	i = 0;
-	while (s[i] == c)
-		i++;
-	if (s[i] == '\0')
-		return (count - 1);
-	while (s[i] != '\0')
+	count = 0;
+	str = (char*)s;
+	while (*str)
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
+		while (*str && *str == c)
+			str++;
+		if (*str != '\0')
 			count++;
-		i++;
+		while (*str && *str != c)
+			str++;
 	}
 	return (count);
 }
