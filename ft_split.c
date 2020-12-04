@@ -6,7 +6,7 @@
 /*   By: dhers <dhers@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 23:02:14 by dhers             #+#    #+#             */
-/*   Updated: 2020/12/04 13:05:00 by dhers            ###   ########.fr       */
+/*   Updated: 2020/12/04 13:14:02 by dhers            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int		ft_count(char const *s, char c)
 {
 	int		count;
-	char    *str;
+	char	*str;
 
 	count = 0;
 	str = (char*)s;
